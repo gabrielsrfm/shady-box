@@ -1,1 +1,17 @@
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #4ecca3; 
+    margin: 10px 0;
+}
 
+#code-output {
+    display: block;
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #4ecca3;
+}
