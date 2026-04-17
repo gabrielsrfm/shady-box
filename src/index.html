@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shady Box | CSS Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
 
+    <main class="container">
+        <header>
+            <h1>Shady Box</h1>
+            <p>Gere sombras CSS modernas em tempo real</p>
+        </header>
+
+        <section class="generator-area">
+            <aside class="controls">
+                <div class="input-group">
+                    <label>Deslocamento Horizontal (h-shadow)</label>
+                    <input type="range" id="h-shadow" min="-50" max="50" value="10">
+                </div>
+
+                <div class="input-group">
+                    <label>Deslocamento Vertical (v-shadow)</label>
+                    <input type="range" id="v-shadow" min="-50" max="50" value="10">
+                </div>
+                
+                </aside>
+
+            <article class="preview-container">
+                <div id="preview"></div>
+            </article>
+        </section>
+
+        <section class="output-container">
+            <code id="code-output">box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);</code>
+            <button id="copy-btn">Copiar Código</button>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
