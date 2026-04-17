@@ -1,24 +1,20 @@
-const hShadow = document.querySelector('#h-shadow');
-const vShadow = document.querySelector('#v-shadow');
-const preview = document.querySelector('#preview');
-const codeOutput = document.querySelector('#code-output');
+const h = document.querySelector('#h-shadow');
+const v = document.querySelector('#v-shadow');
+const blur = document.querySelector('#blur-shadow');
+const spread = document.querySelector('#spread-shadow');
+const color = document.querySelector('#color-shadow');
+const preview = document.querySelector('#preview-box');
+const output = document.querySelector('#code-output');
 
-function updateShadow() {
-   
-    const h = hShadow.value;
-    const v = vShadow.value;
-    
-
-    const shadowString = `${h}px ${v}px 15px rgba(0, 0, 0, 0.5)`;
-    
-   
-    preview.style.boxShadow = shadowString;
-    codeOutput.innerText = `box-shadow: ${shadowString};`;
+function update() {
+    const shadow = `${h.value}px ${v.value}px ${blur.value}px ${spread.value}px ${color.value}`;
+    preview.style.boxShadow = shadow;
+    output.textContent = `box-shadow: ${shadow};`;
 }
 
 
-hShadow.addEventListener('input', updateShadow);
-vShadow.addEventListener('input', updateShadow);
+[h, v, blur, spread, color].forEach(input => {
+    input.addEventListener('input', update);
+});
 
-
-updateShadow();
+update(); 
