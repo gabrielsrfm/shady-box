@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shady Box | Gerador de Sombras CSS</title>
-    
+    <title>Shady Box | Box Shadow Generator</title>
     <link rel="stylesheet" href="src/css/style.css">
-    
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="main-container">
+        <aside class="settings-panel">
+            <h2>Configurações</h2>
+            
+            <div class="control-group">
+                <label>Deslocamento Horizontal</label>
+                <input type="range" id="h-shadow" min="-100" max="100" value="10">
+            </div>
 
-    <main class="container">
-        <header>
-            <h1>Shady Box </h1>
-            <p>Ajuste os sliders e copie o código da sua sombra</p>
-        </header>
+            <div class="control-group">
+                <label>Deslocamento Vertical</label>
+                <input type="range" id="v-shadow" min="-100" max="100" value="10">
+            </div>
 
-        <section class="generator-area">
-            <aside class="controls">
-                <div class="input-group">
-                    <label for="h-shadow">Horizontal</label>
-                    <input type="range" id="h-shadow" min="-50" max="50" value="10">
-                </div>
+            <div class="control-group">
+                <label>Desfoque (Blur)</label>
+                <input type="range" id="blur-shadow" min="0" max="100" value="15">
+            </div>
 
-                <div class="input-group">
-                    <label for="v-shadow">Vertical</label>
-                    <input type="range" id="v-shadow" min="-50" max="50" value="10">
-                </div>
-                
-                </aside>
+            <div class="control-group">
+                <label>Espalhamento (Spread)</label>
+                <input type="range" id="spread-shadow" min="-50" max="50" value="0">
+            </div>
 
-            <article class="preview-container">
-                <div id="preview"></div>
-            </article>
-        </section>
+            <div class="control-group">
+                <label>Cor da Sombra</label>
+                <input type="color" id="color-shadow" value="#000000">
+            </div>
+        </aside>
 
-        <section class="output-container">
-            <code id="code-output">box-shadow: 10px 10px 15px rgba(0,0,0,0.3);</code>
-            <button id="copy-btn">Copiar Código</button>
-        </section>
-    </main>
+        <main class="preview-panel">
+            <div id="preview-box"></div>
+            
+            <div class="code-box">
+                <code id="code-output">box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.5);</code>
+                <button id="copy-btn">Copiar</button>
+            </div>
+        </main>
+    </div>
 
     <script src="src/js/script.js"></script>
 </body>
